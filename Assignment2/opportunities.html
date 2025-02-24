@@ -1,0 +1,109 @@
+<!--
+* INFT2202 - Assignment 2
+* Student ID: 100948423 & 100589655
+* Name: Bilgan Kiris & Mariah Laroco
+* Date: February 23th, 2025
+ -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opportunities</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Volunteer Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="opportunities.html"><i class="fa-solid fa-handshake-angle"></i> Volunteer Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html"><i class="fa-solid fa-calendar-days"></i> Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fa-solid fa-info"></i> About</a>
+                    </li>
+                    <li class="nav-item" id="loginMenuItem">
+                        <a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="nav-item" id="welcomeMenuItem" style="display:none;">
+                        <span class="nav-link" id="welcomeMessage"></span>
+                    </li>
+                    <li class="nav-item" id="logoutMenuItem" style="display:none;">
+                        <a class="nav-link" href="javascript:void(0);" id="logoutBtn"><i class="fa-solid fa-sign-out"></i> Log Out</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="dropdownButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownButton">
+                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="service.html">Terms of Service</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container mt-5">
+    <div class="container mt-5">
+        <h1>Volunteer Opportunities</h1>
+
+        <div id="opportunityList" class="row">
+
+        </div>
+    </div>
+
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sign Up for Opportunity</h2>
+            <form id="signupForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="role">Preferred Role:</label>
+                <input type="text" id="role" name="role" required><br>
+
+                <button type="submit">Submit</button>
+                <p id="confirmationMessage" class="confirmation-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</main>
+
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container text-center">
+        <a href="privacy.html">Privacy Policy</a> | <a href="service.html">Terms of Service</a>
+    </div>
+</footer>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+</html>
